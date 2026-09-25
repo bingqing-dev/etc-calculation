@@ -6,12 +6,7 @@ from datetime import datetime
 class ETc:
     """
     基于单作物系数法的作物蒸散量(ETc)计算
-    可跨年，忽略闰年
-
-    参数说明(单位需严格匹配):
-    --------------------------------
-    
-    --------------------------------
+    可跨年，闰年不做额外处理
     """
     def __init__(self, crop_type='corn', ET0_file=None, date_col='date', ET0_col='eto'):
         """
