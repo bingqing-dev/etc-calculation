@@ -13,6 +13,9 @@ Python tools for crop water requirement calculation
 
 - `ETc_cal.py`：作物需水量（ETc）计算类
   - 基于单作物系数法：ETc = Kc × ET₀
+  - 发展期(dev)Kc线性插值
+  - 内置默认作物参数“玉米”可用作测试
+  - 正式使用时需自行输入作物参数，注意格式
   - 支持玉米、小麦等作物
   - 支持跨年作物（如冬小麦）的生长季判断
 
