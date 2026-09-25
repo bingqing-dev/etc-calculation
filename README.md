@@ -26,6 +26,13 @@ Python tools for crop water requirement calculation
   - RMSE < 0.2 mm/d
 - 结论：自写函数与标准库输出高度一致，可用于后续作物需水量计算。
 
+## 依赖
+
+- Python 3.8+
+- pandas
+- numpy
+- pyfao56（仅用于验证，非运行必需）
+
 ## 使用示例
 
 ```python
@@ -40,9 +47,3 @@ print(et0)
 calc = ETc(crop_type='corn', ET0_file='corn_et0.csv', date_col='DATE', ET0_col='ET0')
 calc.save('corn_etc.csv')
 
-## 依赖
-
-- Python 3.8+
-- pandas
-- numpy
-- pyfao56（仅用于验证，非运行必需）
