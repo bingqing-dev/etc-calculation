@@ -28,11 +28,15 @@ Python tools for crop water requirement calculation
 
 ## 依赖
 
+运行 ET0/ETc 计算需要：
 - Python 3.8+
 - pandas
 - numpy
-- pyfao56（仅用于验证，非运行必需）
 
+可选（仅用于验证 ET0 结果）：
+- pyfao56
+- scikit-learn
+  
 ## 使用示例
 
 ```python
