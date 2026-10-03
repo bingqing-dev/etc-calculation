@@ -48,6 +48,7 @@ Python tools for crop water requirement calculation
 ###命令行(CMD/PowerShell)
 ```bash
 python main.py --file your_file_path.csv --output output_path.csv
+```
 
 ###Python(Jupyter/IDE)
 ```python
@@ -64,5 +65,6 @@ calc.save('corn_etc.csv')
 #----------------------------------------------
 #或者
 from core import run
-df = run('your_file_path.csv', crop='corn') 
+df = run('your_file_path.csv', crop='corn')
+```
 
