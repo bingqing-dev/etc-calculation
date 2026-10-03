@@ -46,7 +46,9 @@ Python tools for crop water requirement calculation
   
 ## 使用示例
 ```cmd
+##命令行(CMD)
 python main.py --file your file path.csv --output output path.csv
+
 ```python
 from PM_et0 import ET0_PM
 from ETc_cal import ETc
