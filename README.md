@@ -18,6 +18,10 @@ Python tools for crop water requirement calculation
   - 正式使用时需自行输入作物参数，注意格式
   - 支持玉米、小麦等作物
   - 支持跨年作物（如冬小麦）的生长季判断
+-'core.py':核心流程，串联ET₀与ETc
+  -默认海拔（z）1100；维度（lat）38.2*pi/180自行替换
+  -内置作物（同ET₀）可于PM_et0.py中自行增添
+-'main.py':命令行入口
 
 ## 数据验证
 
@@ -41,7 +45,8 @@ Python tools for crop water requirement calculation
 - scikit-learn
   
 ## 使用示例
-
+```cmd
+python main.py --file your file path.csv --output output path.csv
 ```python
 from PM_et0 import ET0_PM
 from ETc_cal import ETc
@@ -53,4 +58,8 @@ print(et0)
 # 计算 ETc
 calc = ETc(crop_type='corn', ET0_file='corn_et0.csv', date_col='DATE', ET0_col='ET0')
 calc.save('corn_etc.csv')
+#----------------------------------------------
+#或者
+from core import run
+df = run('data.csv', crop=corn) 
 
